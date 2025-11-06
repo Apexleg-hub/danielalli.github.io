@@ -17,6 +17,6 @@ Data pipelines, ETL automation, and API development.
 
 
 
-Contact Me
+Contact Me:
 - LinkedIn:https://linkedin.com/in/danielalli 
-- Email:danielalli7@gmail.com
+- Email:allidaniel7@gmail.com
