@@ -1,0 +1,86 @@
+# Database Configuration
+databases:
+  primary:
+    type: ${DB_TYPE:sqlite}
+    name: ${DB_NAME:etl_data.db}
+    
+  # SQLite Configuration
+  sqlite:
+    file_path: "data/database/etl_data.db"
+    timeout: 30
+    check_same_thread: false
+    
+  # PostgreSQL Configuration (for production)
+  postgres:
+    host: ${POSTGRES_HOST:localhost}
+    port: ${POSTGRES_PORT:5432}
+    database: ${POSTGRES_DB:etl_data}
+    username: ${POSTGRES_USER:etl_user}
+    password: ${POSTGRES_PASSWORD:}
+    pool_size: 10
+    max_overflow: 20
+    
+  # Schema Configuration
+  schemas:
+    financial:
+      table_name: "stock_prices"
+      create_table: |
+        CREATE TABLE IF NOT EXISTS stock_prices (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          symbol TEXT NOT NULL,
+          company_name TEXT,
+          current_price REAL,
+          market_cap REAL,
+          volume INTEGER,
+          pe_ratio REAL,
+          earnings_per_share REAL,
+          price_category TEXT,
+          extraction_date TEXT,
+          extraction_timestamp TEXT,
+          load_timestamp TEXT DEFAULT CURRENT_TIMESTAMP,
+          batch_id TEXT
+        )
+      
+    weather:
+      table_name: "weather_data"
+      create_table: |
+        CREATE TABLE IF NOT EXISTS weather_data (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          city_name TEXT NOT NULL,
+          country TEXT NOT NULL,
+          city_id TEXT NOT NULL,
+          latitude REAL,
+          longitude REAL,
+          temperature_c REAL,
+          temperature_f REAL,
+          feels_like_c REAL,
+          feels_like_f REAL,
+          temp_min_c REAL,
+          temp_max_c REAL,
+          pressure INTEGER,
+          humidity INTEGER,
+          visibility INTEGER,
+          wind_speed REAL,
+          wind_deg INTEGER,
+          cloudiness INTEGER,
+          weather_main TEXT,
+          weather_description TEXT,
+          weather_icon TEXT,
+          timezone INTEGER,
+          sunrise TEXT,
+          sunset TEXT,
+          data_source TEXT,
+          temperature_category TEXT,
+          humidity_category TEXT,
+          extraction_date TEXT,
+          extraction_timestamp TEXT,
+          load_timestamp TEXT DEFAULT CURRENT_TIMESTAMP,
+          batch_id TEXT
+        )
+
+# Backup Configuration
+backup:
+  enabled: true
+  frequency: "daily"
+  keep_backups: 7
+  backup_path: "data/backups/"

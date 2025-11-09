@@ -1,0 +1,65 @@
+# API Configuration for Data Sources
+apis:
+  # Yahoo Finance API (No API key required)
+  yahoo_finance:
+    base_url: "https://query1.finance.yahoo.com"
+    timeout: 30
+    retry_attempts: 3
+    retry_delay: 5
+    rate_limit_per_minute: 60
+    
+  # OpenWeatherMap API
+  openweather:
+    base_url: "https://api.openweathermap.org/data/2.5"
+    api_key: ${OPENWEATHER_API_KEY:}
+    timeout: 30
+    retry_attempts: 3
+    retry_delay: 2
+    rate_limit_per_minute: 60
+    units: "metric"  # metric, imperial, standard
+    
+  # Alpha Vantage API (Alternative financial data)
+  alpha_vantage:
+    base_url: "https://www.alphavantage.co/query"
+    api_key: ${ALPHA_VANTAGE_API_KEY:}
+    timeout: 30
+    retry_attempts: 2
+    rate_limit_per_minute: 5
+
+# Request Headers
+headers:
+  default:
+    User-Agent: "ETL-Pipeline/1.0"
+    Accept: "application/json"
+    Content-Type: "application/json"
+  
+  yahoo_finance:
+    User-Agent: "ETL-Pipeline/1.0"
+    Accept: "application/json"
+  
+  openweather:
+    User-Agent: "ETL-Pipeline/1.0"
+
+# Data Validation Rules
+validation:
+  financial:
+    required_fields:
+      - symbol
+      - current_price
+      - extraction_timestamp
+    value_ranges:
+      current_price: {min: 0, max: 100000}
+      volume: {min: 0}
+      pe_ratio: {min: 0, max: 1000}
+  
+  weather:
+    required_fields:
+      - city_name
+      - country
+      - temperature_c
+      - extraction_timestamp
+    value_ranges:
+      temperature_c: {min: -50, max: 60}
+      humidity: {min: 0, max: 100}
+      pressure: {min: 800, max: 1100}
+      wind_speed: {min: 0, max: 150}
