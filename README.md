@@ -9,7 +9,7 @@ My Portfolios
 Data Analyst Portfolio:https://github.com/Apexleg-hub/data-analyst-portfolio
 Interactive dashboards & business analytics using Power BI and SQL.
 
-Data Science Portfolio: https://github.com/Apexleg-hub/data-science-portfolio
+Data Science Portfolio: https://github.com/Apexleg-hub/danielalli.github.io/tree/main/Data%20Science%20Portfolio
 Machine learning, predictive modeling, and statistical analysis.
 
 Data Engineering Portfolio:https://github.com/Apexleg-hub/data-engineering-portfolio
