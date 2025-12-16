@@ -1,30 +1,38 @@
-Key Features:
-1. Technical Indicators Engineered:
+About Me
+I am a Data Scientist with hands-on experience in data analysis, machine learning, and business intelligence. My interests include predictive modeling, financial analytics, and building practical AI-driven systems that support decision-making.
+I am currently seeking remote data science or analytics opportunities where I can contribute analytical rigor and scalable solutions.
 
-RSI (Relative Strength Index)
-MACD (Moving Average Convergence Divergence)
-Exponential Moving Averages (EMA 12, 26)
-Simple Moving Averages (SMA 5, 10, 20)
-Bollinger Bands
-Momentum indicators
-Volume analysis
+Overview
 
-2. Machine Learning Models:
+This repository contains a collection of data science, machine learning, and analytical projects demonstrating my ability to extract insights from data, build predictive models, and deploy data-driven solutions. The projects span exploratory data analysis, statistical modeling, machine learning, time series forecasting, and applied analytics across business and financial domains.
 
-Support Vector Machine (SVM) with RBF kernel
-Random Forest Classifier (100 trees)
+The primary tools used include Python, SQL, Power BI, Excel, and R, with an emphasis on reproducibility, clean code, and practical problem-solving.
 
-3. Evaluation Metrics:
+Skills & Technologies
 
-Accuracy
-Precision
-Recall
-Confusion matrices
-Classification reports
+Programming & Querying
+Python (Pandas, NumPy, Scikit-learn, TensorFlow/Keras)
+SQL (PostgreSQL, SQL Server)
+R (statistical analysis)
 
-4. Visualizations:
+Data Analysis & Visualization
+Exploratory Data Analysis (EDA)
+Power BI, Matplotlib, Seaborn
+Excel (advanced formulas, pivot tables)
 
-Model accuracy comparison
-Precision vs Recall comparison
-Confusion matrices for both models
+Machine Learning & Statistics
+Regression & Classification
+Random Forest, Gradient Boosting, SVM, XGBoost
+Time Series Analysis & Forecasting
+Statistical inference (ANOVA, hypothesis testing)
 
+Data Engineering & Tools
+ETL pipeline design
+API data extraction
+Git & GitHub
+Docker (basic setup)
+
+Contact:
+GitHub: https://github.com/Apexleg-hub/danielalli.github.io.git 
+LinkedIn: https://www.linkedin.com/in/daniel-alli-0a3b4421/
+Email: allidaniel7@gmail.com
