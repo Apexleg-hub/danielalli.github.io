@@ -1,4 +1,4 @@
-About Me
+
 I am a Data Scientist with hands-on experience in data analysis, machine learning, and business intelligence. My interests include predictive modeling, financial analytics, and building practical AI-driven systems that support decision-making.
 I am currently seeking remote data science or analytics opportunities where I can contribute analytical rigor and scalable solutions.
 
@@ -36,3 +36,4 @@ Contact:
 GitHub: https://github.com/Apexleg-hub/danielalli.github.io.git 
 LinkedIn: https://www.linkedin.com/in/daniel-alli-0a3b4421/
 Email: allidaniel7@gmail.com
+
